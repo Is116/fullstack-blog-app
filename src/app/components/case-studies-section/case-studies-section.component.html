@@ -1,0 +1,20 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
+    <span class="text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-3xl lg:text-4xl text-dark mb-2 sm:mb-0">Case Studies</span>
+    <a href="#" class="border border-black hover:text-white hover:bg-black font-medium rounded-full text-sm px-3 py-2 text-center mr-2 mb-2 sm:mr-0 sm:mb-0">Read more</a>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-2 sm:gap-12 mt-14">
+    <div *ngFor="let caseStudy of caseStudies">
+      <div class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <img class="rounded-t-lg w-fit h-80 object-cover" [src]="caseStudy.image" alt="" />
+        <div class="p-5">
+          <a [href]="caseStudy.link">
+            <span class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ caseStudy.title }}</span>
+          </a>
+          <p class="mb-6 font-normal text-gray-700 dark:text-gray-400">{{ caseStudy.description }}</p>
+          <a [href]="caseStudy.link" class="text-sm text-black dark:text-white hover:underline">Read more<i class="fas fa-angle-double-right ml-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
